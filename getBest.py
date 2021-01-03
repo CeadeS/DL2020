@@ -2,7 +2,8 @@ import glob
 import csv
 import re
 
-csvFileList = glob.glob("./*.csv")
+# csvFileList = glob.glob("./**/*.csv") # check all csv file under root recursively
+csvFileList = glob.glob("./results/*.csv") # only results folder
 fNameRegex = re.compile(r'(?:.*/)(.*)(?:\.csv$)')
 showLines = (1,5,20)
 bestList = {}
