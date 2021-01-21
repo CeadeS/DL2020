@@ -19,7 +19,7 @@ for filePath in csvFileList:
             try:
                 if row[0].isdecimal() and int(row[0])+1 in showLines:
                     # print(int(row[0])+1, ',', row[3])
-                    bestList[int(row[0])+1].append((float(row[3]),fName,))
+                    bestList[int(row[0])+1].append((float(row[3]),filePath,))
             except:
                 print('Error in file:', fName, ' - Not all lines from this file were processed.')
 
@@ -28,5 +28,8 @@ showMax = 10
 for k in showLines:
     bestList[k].sort(key=lambda x: x[0], reverse=True)
     print(f'\n=== TOP {showMax} in {k} EPOCH(S) ===')
-    for i in range(0,showMax):
-        print(bestList[k][i][0],'\t',bestList[k][i][1])
+    max = showMax
+    if(max > len(bestList[k])):
+        max = len(bestList[k])
+    for i in range(0,max):
+        print(str(i+1), ': ',bestList[k][i][0],'\t',bestList[k][i][1])
