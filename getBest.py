@@ -5,7 +5,7 @@ from pathlib import Path
 
 csvFileList = Path('./').rglob('*.csv')
 fNameRegex = re.compile(r'(?:.*/)?(.*)(?:\.csv$)')
-showLines = (1,5,20)
+showLines = (1,5,20,40,80,200)
 bestList = {}
 for k in showLines:
     bestList[k] = []
