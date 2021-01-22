@@ -1,5 +1,5 @@
 # DL2020
-_This Repo is meant for collaboration during the DL2020 assignment_
+_This Repo is meant as a collaboration platform during the DL2020 group assignment. The goal is to experiment with different regularization techniques and achieve good results on a publicly available dataset. [Imagewoof](https://github.com/fastai/imagenette) was chosen for this purpose. The leaderboard entries at the time of this writing are __76.61% (5 Epochs)__, __86.27% (20 Epochs)__ and __87.83% (80 Epchs)__ for the 128px Category._
 
 ## Folder Structure
 - __architectures__ \
