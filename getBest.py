@@ -12,16 +12,17 @@ for k in showLines:
 
 for filePath in csvFileList:
     fName = fNameRegex.search(filePath.name).groups()[0]
+    if 'imagenette' not in filePath.name:
     # print('=== FILE:', fName," ===")
-    with open(filePath.absolute(), 'r') as file:
-        csvreader = csv.reader(file, delimiter=',')
-        for row in csvreader:
-            try:
-                if row[0].isdecimal() and int(row[0])+1 in showLines:
-                    # print(int(row[0])+1, ',', row[3])
-                    bestList[int(row[0])+1].append((float(row[3]),filePath,))
-            except:
-                print('Error in file:', fName, ' - Not all lines from this file were processed.')
+        with open(filePath.absolute(), 'r') as file:
+            csvreader = csv.reader(file, delimiter=',')
+            for row in csvreader:
+                try:
+                    if row[0].isdecimal() and int(row[0])+1 in showLines:
+                        # print(int(row[0])+1, ',', row[3])
+                        bestList[int(row[0])+1].append((float(row[3]),filePath,))
+                except:
+                    print('Error in file:', fName, ' - Not all lines from this file were processed.')
 
 # pretty inefficient, but easier to type
 showMax = 10
