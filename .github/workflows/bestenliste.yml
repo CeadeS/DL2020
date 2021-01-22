@@ -30,4 +30,4 @@ jobs:
           python-version: 3.8
       - name: Get List of Best Results
         run: |
-            python getBest.py
+            python ./misc/getBest.py
