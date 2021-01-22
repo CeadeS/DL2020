@@ -14,7 +14,7 @@ _This Repo is meant for collaboration during the DL2020 assignment_
     Contains the generated CSV-Filed obtained by the experiments
 
 ## File Name Schema
-All files are named after the following schema: `x_m_r-p[_r-p]_i` where __x__ is the number of epochs trained with this configuration, __m__ is the underlying model that was tested and __r__ the regularization technique/s that was/were used. Parameters are further separated by the __-__ Sign.
+All files are named after the following schema: `x_m_r-p[_r-p]_i` where __x__ is the number of epochs trained with this configuration, __m__ is the underlying model that was tested and __r__ the regularization technique/s that was/were used. Parameters are further separated by the __-__ Sign. If multiple regularizations were used on a dataset, they are listed in alphabetical order.
 
 _Example:_ The `file 20_o_dropout-20_3.csv` would mean that _20 Epochs_ were trained on the _optimized base model_. The tested regularization was a _Dropout_ of _20 %_ and this is the _3_ rd iteration.
 
