@@ -27,7 +27,7 @@ We used the following models to evaluate different regularization techniques:
 ## Regularization Techniques
 
 ### Optimizer and Early Stopping
-
+Model testing to avoid overfitting.
 ### architectures
 
 ### blurpool and savemodelcallback
